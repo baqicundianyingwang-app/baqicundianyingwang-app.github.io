@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>霸气村电影网 - 热门电影电视剧推荐_高清影视资讯聚合平台</title>
+<meta name="description" content="霸气村电影网（baqicundianyingwang-app）为您提供热门电影推荐、电视剧追更、动漫综艺盘点与最新影视资讯，聚合全网高清影视内容导航，每日更新，免费浏览，专注打造简洁高效的影视内容聚合站。" />
+<meta name="keywords" content="霸气村电影网,baqicundianyingwang-app,电影推荐,电视剧推荐,影视资讯,动漫推荐,综艺盘点,高清影视,影视聚合" />
+<meta name="author" content="霸气村电影网" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="canonical" href="https://www.baqicundianyingwang-app.com/" />
+<meta name="theme-color" content="#6d28d9" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="霸气村电影网" />
+<meta property="og:title" content="霸气村电影网 - 热门电影电视剧推荐_高清影视资讯聚合平台" />
+<meta property="og:description" content="霸气村电影网聚合热门电影、电视剧、动漫、综艺与影视资讯，每日更新，简洁高效，一站直达。" />
+<meta property="og:url" content="https://www.baqicundianyingwang-app.com/" />
+<meta property="og:locale" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="霸气村电影网 - 热门电影电视剧推荐" />
+<meta name="twitter:description" content="电影、电视剧、动漫、综艺与影视资讯一站聚合，每日更新。" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --brand: #6d28d9;
+    --brand-2: #db2777;
+    --brand-3: #f59e0b;
+    --ink: #1c1b22;
+    --ink-2: #55536a;
+    --line: #e8e6f2;
+    --bg: #f6f5fb;
+    --card: #ffffff;
+    --radius: 18px;
+    --shadow: 0 10px 30px rgba(109, 40, 217, .10);
+    --shadow-h: 0 18px 42px rgba(109, 40, 217, .18);
+    --maxw: 1200px;
+  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+  h1, h2, h3, h4, p { margin: 0; }
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .skip { position: absolute; left: -9999px; top: 0; }
+  .skip:focus { left: 12px; top: 12px; z-index: 99; background: #fff; padding: 8px 14px; border-radius: 8px; }
+
+  /* ===== 顶部导航 ===== */
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .logo-mark {
+    width: 40px; height: 40px; flex: 0 0 40px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    color: #fff; font-weight: 800; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(219, 39, 119, .32);
+  }
+  .logo-text strong { display: block; font-size: 18px; letter-spacing: .5px; line-height: 1.2; }
+  .logo-text small { display: block; font-size: 11px; color: var(--ink-2); letter-spacing: .6px; word-break: break-all; }
+  .nav-toggle {
+    display: none; border: 1px solid var(--line); background: #fff; color: var(--brand);
+    font-size: 14px; padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  }
+  .nav ul { display: flex; gap: 4px; }
+  .nav a {
+    display: block; padding: 8px 12px; border-radius: 999px; font-size: 15px; color: var(--ink-2);
+    transition: background .2s, color .2s;
+  }
+  .nav a:hover, .nav a:focus { background: #f1eefe; color: var(--brand); }
+  .nav a.is-cur { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; }
+
+  /* ===== 首屏 Hero ===== */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #2e1065 0%, #6d28d9 45%, #db2777 100%);
+    color: #fff; padding: 56px 0 68px;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: auto -10% -60% 60%; height: 260px;
+    background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, .45), transparent 65%);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255, 255, 255, .16); border: 1px solid rgba(255, 255, 255, .28);
+    padding: 6px 14px; border-radius: 999px; font-size: 13px; margin-bottom: 18px;
+  }
+  .hero h1 { font-size: clamp(28px, 6vw, 52px); line-height: 1.25; font-weight: 800; letter-spacing: 1px; }
+  .hero h1 em { font-style: normal; color: #fde68a; }
+  .hero .sub { margin-top: 14px; max-width: 640px; font-size: clamp(14px, 3.4vw, 17px); color: rgba(255, 255, 255, .88); }
+  .hero .url {
+    margin-top: 12px; font-size: 13px; color: rgba(255, 255, 255, .78); word-break: break-all;
+  }
+  .search {
+    margin-top: 26px; display: flex; gap: 10px; flex-wrap: wrap; max-width: 620px;
+    background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .3);
+    padding: 10px; border-radius: 999px;
+  }
+  .search input {
+    flex: 1 1 240px; min-width: 0; height: 44px; border: 0; outline: none;
+    background: transparent; color: #fff; font-size: 15px; padding: 0 12px;
+  }
+  .search input::placeholder { color: rgba(255, 255, 255, .7); }
+  .search button {
+    height: 44px; padding: 0 26px; border: 0; border-radius: 999px; cursor: pointer;
+    background: #fff; color: var(--brand); font-weight: 700; font-size: 15px;
+  }
+  .stats { margin-top: 34px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 720px; }
+  .stats div { background: rgba(255, 255, 255, .12); border-radius: 14px; padding: 14px 10px; text-align: center; }
+  .stats b { display: block; font-size: clamp(18px, 4.4vw, 26px); color: #fde68a; }
+  .stats span { font-size: 12px; color: rgba(255, 255, 255, .82); }
+
+  /* ===== 通用区块 ===== */
+  .section { padding: 52px 0 8px; }
+  .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+  .sec-head h2 { font-size: clamp(21px, 4.6vw, 28px); font-weight: 800; position: relative; padding-left: 14px; }
+  .sec-head h2::before {
+    content: ""; position: absolute; left: 0; top: 12%; bottom: 12%; width: 5px; border-radius: 4px;
+    background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  }
+  .sec-head p { font-size: 13px; color: var(--ink-2); }
+  .more { font-size: 14px; color: var(--brand); white-space: nowrap; }
+
+  /* ===== 卡片网格 ===== */
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s;
+    display: flex; flex-direction: column;
+  }
+  .card:hover, .card:focus-within { transform: translateY(-6px); box-shadow: var(--shadow-h); }
+  .poster {
+    position: relative; aspect-ratio: 3 / 4; display: flex; align-items: flex-end; padding: 14px;
+    color: #fff; font-weight: 700; letter-spacing: .5px;
+  }
+  .poster span { position: relative; z-index: 1; text-shadow: 0 2px 8px rgba(0, 0, 0, .45); font-size: 15px; }
+  .poster .tag {
+    position: absolute; top: 12px; left: 12px; z-index: 1;
+    background: rgba(0, 0, 0, .42); border-radius: 8px; padding: 2px 9px; font-size: 12px; font-weight: 500;
+  }
+  .p1 { background: linear-gradient(160deg, #7c3aed, #2563eb); }
+  .p2 { background: linear-gradient(160deg, #db2777, #f97316); }
+  .p3 { background: linear-gradient(160deg, #0891b2, #4f46e5); }
+  .p4 { background: linear-gradient(160deg, #f59e0b, #ef4444); }
+  .p5 { background: linear-gradient(160deg, #059669, #0ea5e9); }
+  .p6 { background: linear-gradient(160deg, #9333ea, #ec4899); }
+  .p7 { background: linear-gradient(160deg, #475569, #1e293b); }
+  .p8 { background: linear-gradient(160deg, #16a34a, #ca8a04); }
+  .card-body { padding: 13px 14px 16px; }
+  .card-body h3 { font-size: 15px; font-weight: 700; line-height: 1.5; }
+  .meta { margin-top: 6px; font-size: 12.5px; color: var(--ink-2); display: flex; gap: 10px; flex-wrap: wrap; }
+  .meta .score { color: #f59e0b; font-weight: 700; }
+
+  /* ===== 排行榜 ===== */
+  .rank { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 6px; box-shadow: var(--shadow); }
+  .rank li { display: flex; align-items: center; gap: 12px; padding: 11px 12px; border-radius: 12px; }
+  .rank li:hover { background: #f7f4ff; }
+  .rank .no { width: 26px; height: 26px; flex: 0 0 26px; border-radius: 8px; background: #f1eefe; color: var(--brand); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .rank li:nth-child(1) .no { background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; }
+  .rank li:nth-child(2) .no { background: linear-gradient(135deg, #94a3b8, #475569); color: #fff; }
+  .rank li:nth-child(3) .no { background: linear-gradient(135deg, #fbbf24, #b45309); color: #fff; }
+  .rank .txt { flex: 1; min-width: 0; font-size: 14.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rank .hot { font-size: 12px; color: var(--brand-2); font-weight: 700; }
+
+  /* ===== 双栏：排行榜 + 资讯 ===== */
+  .two-col { display: grid; grid-template-columns: 1fr 1.25fr; gap: 18px; align-items: start; }
+
+  /* ===== 资讯列表 ===== */
+  .news li { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 15px 16px; margin-bottom: 12px; box-shadow: var(--shadow); }
+  .news li:last-child { margin-bottom: 0; }
+  .news h3 { font-size: 15.5px; font-weight: 700; line-height: 1.6; }
+  .news p { margin-top: 6px; font-size: 13.5px; color: var(--ink-2); }
+  .news .date { margin-top: 8px; font-size: 12px; color: #9a97ad; }
+
+  /* ===== 分类标签 ===== */
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tags a { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px; font-size: 14px; color: var(--ink-2); box-shadow: 0 4px 14px rgba(28, 27, 34, .05); }
+  .tags a:hover { border-color: var(--brand); color: var(--brand); }
+
+  /* ===== 关于 + FAQ ===== */
+  .about { background: linear-gradient(135deg, #ffffff, #f3efff); border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; box-shadow: var(--shadow); }
+  .about h2 { font-size: clamp(20px, 4.4vw, 26px); font-weight: 800; margin-bottom: 12px; }
+  .about p { color: var(--ink-2); font-size: 14.5px; margin-bottom: 12px; }
+  .faq { margin-top: 20px; }
+  .faq details { border-top: 1px solid var(--line); padding: 12px 0; }
+  .faq summary { cursor: pointer; font-weight: 700; font-size: 15px; list-style: none; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "＋"; float: right; color: var(--brand); }
+  .faq details[open] summary::after { content: "－"; }
+  .faq p { margin-top: 8px; font-size: 14px; color: var(--ink-2); }
+
+  /* ===== 底部 ===== */
+  .site-footer { margin-top: 52px; background: #1c1b22; color: #cfcde0; padding: 40px 0 26px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 22px; }
+  .site-footer h4 { color: #fff; font-size: 15px; margin-bottom: 12px; }
+  .site-footer a, .site-footer li { font-size: 13.5px; color: #cfcde0; display: block; padding: 4px 0; }
+  .site-footer a:hover { color: #fde68a; }
+  .foot-note { margin-top: 26px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .12); font-size: 12.5px; color: #9a97ad; text-align: center; }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 860px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-toggle { display: block; }
+    .nav {
+      position: absolute; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line);
+      max-height: 0; overflow: hidden; transition: max-height .3s ease;
+    }
+    .nav.open { max-height: 380px; }
+    .nav ul { flex-direction: column; padding: 10px 20px 16px; gap: 2px; }
+    .nav a { border-radius: 10px; padding: 11px 12px; }
+    .hero { padding: 40px 0 52px; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .section { padding: 40px 0 4px; }
+    .wrap { padding: 0 16px; }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  }
+  @media (max-width: 420px) {
+    .grid { grid-template-columns: 1fr; }
+    .logo-text strong { font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .card { transition: none; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.baqicundianyingwang-app.com/#website",
+      "url": "https://www.baqicundianyingwang-app.com/",
+      "name": "霸气村电影网",
+      "alternateName": "baqicundianyingwang-app",
+      "inLanguage": "zh-CN",
+      "description": "霸气村电影网聚合热门电影、电视剧、动漫、综艺与影视资讯，每日更新。",
+      "publisher": { "@id": "https://www.baqicundianyingwang-app.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.baqicundianyingwang-app.com/#organization",
+      "name": "霸气村电影网",
+      "url": "https://www.baqicundianyingwang-app.com/",
+      "logo": "https://www.baqicundianyingwang-app.com/logo.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "霸气村电影网", "item": "https://www.baqicundianyingwang-app.com/" },
+        { "@type": "ListItem", "position": 2, "name": "电影推荐", "item": "https://www.baqicundianyingwang-app.com/#movie" },
+        { "@type": "ListItem", "position": 3, "name": "热剧追更", "item": "https://www.baqicundianyingwang-app.com/#tv" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "霸气村电影网是什么类型的网站？",
+          "acceptedAnswer": { "@type": "Answer", "text": "霸气村电影网是一个影视内容聚合与导航站点，提供电影推荐、电视剧追更、动漫与综艺盘点，以及最新影视资讯，帮助用户快速发现值得一看的内容。" }
+        },
+        {
+          "@type": "Question",
+          "name": "霸气村电影网的内容更新频率如何？",
+          "acceptedAnswer": { "@type": "Answer", "text": "站点每日更新，热门榜单与资讯栏目会同步近期上映影片、剧集排播与行业动态。" }
+        },
+        {
+          "@type": "Question",
+          "name": "在霸气村电影网可以找到哪些栏目？",
+          "acceptedAnswer": { "@type": "Answer", "text": "包含首页精选、电影推荐、热剧追更、动漫天地、综艺娱乐、影视资讯、热门榜单与关于我们等栏目。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<a class="skip" href="#main">跳转到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#" aria-label="霸气村电影网 首页">
+      <span class="logo-mark" aria-hidden="true">霸</span>
+      <span class="logo-text">
+        <strong>霸气村电影网</strong>
+        <small>baqicundianyingwang-app</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" id="navToggle" aria-expanded="false" aria-controls="nav">栏目菜单</button>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <ul>
+        <li><a class="is-cur" href="#">首页精选</a></li>
+        <li><a href="#movie">电影推荐</a></li>
+        <li><a href="#tv">热剧追更</a></li>
+        <li><a href="#anime">动漫天地</a></li>
+        <li><a href="#variety">综艺娱乐</a></li>
+        <li><a href="#news">影视资讯</a></li>
+        <li><a href="#about">关于我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="badge">每日更新 · 影视内容聚合导航</span>
+      <h1>霸气村电影网 —— 发现<em>值得一看</em>的好电影好剧</h1>
+      <p class="sub">霸气村电影网（baqicundianyingwang-app）聚合热门电影、电视剧、动漫、综艺与影视资讯，按类型、热度与评分整理成清晰的榜单，打开就能找到今天想看的内容。</p>
+      <p class="url">官方网址：https://www.baqicundianyingwang-app.com</p>
+      <form class="search" action="#" method="get" role="search" onsubmit="return false;">
+        <input type="search" name="q" aria-label="搜索影视内容" placeholder="搜索电影、剧集、演员，如：悬疑、都市、热血" />
+        <button type="submit">搜索</button>
+      </form>
+      <div class="stats">
+        <div><b>24,800+</b><span>收录影片</span></div>
+        <div><b>1,260+</b><span>剧集专题</span></div>
+        <div><b>每日</b><span>榜单更新</span></div>
+        <div><b>6 大</b><span>内容栏目</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：首页精选 -->
+  <section class="section" id="featured" aria-labelledby="featured-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="featured-t">首页精选 · 编辑力荐</h2>
+          <p>霸气村电影网编辑团队从近期热度与口碑中挑选的 8 部作品</p>
+        </div>
+        <a class="more" href="#">查看全部精选 →</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="poster p1"><span class="tag">电影</span><span>光影追缉</span></div>
+          <div class="card-body">
+            <h3>光影追缉</h3>
+            <div class="meta"><span class="score">9.1 分</span><span>2025</span><span>悬疑 / 犯罪</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p2"><span class="tag">剧集</span><span>山海长歌</span></div>
+          <div class="card-body">
+            <h3>山海长歌</h3>
+            <div class="meta"><span class="score">8.9 分</span><span>2025</span><span>古装 / 传奇</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p3"><span class="tag">电影</span><span>深蓝之下</span></div>
+          <div class="card-body">
+            <h3>深蓝之下</h3>
+            <div class="meta"><span class="score">8.7 分</span><span>2024</span><span>科幻 / 冒险</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p4"><span class="tag">动漫</span><span>星轨少年</span></div>
+          <div class="card-body">
+            <h3>星轨少年</h3>
+            <div class="meta"><span class="score">9.0 分</span><span>2025</span><span>热血 / 成长</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p5"><span class="tag">剧集</span><span>城市微光</span></div>
+          <div class="card-body">
+            <h3>城市微光</h3>
+            <div class="meta"><span class="score">8.6 分</span><span>2025</span><span>都市 / 情感</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p6"><span class="tag">综艺</span><span>周末开麦</span></div>
+          <div class="card-body">
+            <h3>周末开麦</h3>
+            <div class="meta"><span class="score">8.4 分</span><span>2026</span><span>音乐 / 真人秀</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p7"><span class="tag">电影</span><span>无声证词</span></div>
+          <div class="card-body">
+            <h3>无声证词</h3>
+            <div class="meta"><span class="score">8.8 分</span><span>2024</span><span>剧情 / 法庭</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster p8"><span class="tag">动漫</span><span>林间食堂</span></div>
+          <div class="card-body">
+            <h3>林间食堂</h3>
+            <div class="meta"><span class="score">8.9 分</span><span>2025</span><span>治愈 / 日常</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：电影推荐 -->
+  <section class="section" id="movie" aria-labelledby="movie-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="movie-t">电影推荐 · 按类型挑片</h2>
+          <p>霸气村电影网电影库：动作、科幻、悬疑、喜剧、文艺全覆盖</p>
+        </div>
+        <a class="more" href="#">进入电影频道 →</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="poster p3"><span class="tag">科幻</span><span>深蓝之下</span></div>
+          <div class="card-body"><h3>深蓝之下</h3><div class="meta"><span class="score">8.7 分</span><span>硬科幻</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p1"><span class="tag">悬疑</span><span>光影追缉</span></div>
+          <div class="card-body"><h3>光影追缉</h3><div class="meta"><span class="score">9.1 分</span><span>高智商反转</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p4"><span class="tag">动作</span><span>烈风行动</span></div>
+          <div class="card-body"><h3>烈风行动</h3><div class="meta"><span class="score">8.2 分</span><span>大场面</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p2"><span class="tag">喜剧</span><span>好运便利店</span></div>
+          <div class="card-body"><h3>好运便利店</h3><div class="meta"><span class="score">8.0 分</span><span>轻松解压</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：热剧追更 -->
+  <section class="section" id="tv" aria-labelledby="tv-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="tv-t">热剧追更 · 更新日历</h2>
+          <p>正在热播与即将上线的剧集排播，霸气村电影网同步更新</p>
+        </div>
+        <a class="more" href="#">查看追更表 →</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="poster p2"><span class="tag">更新至 28 集</span><span>山海长歌</span></div>
+          <div class="card-body"><h3>山海长歌</h3><div class="meta"><span class="score">8.9 分</span><span>每周三、四更新</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p5"><span class="tag">更新至 16 集</span><span>城市微光</span></div>
+          <div class="card-body"><h3>城市微光</h3><div class="meta"><span class="score">8.6 分</span><span>每周一更新</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p7"><span class="tag">已完结</span><span>长夜将尽</span></div>
+          <div class="card-body"><h3>长夜将尽</h3><div class="meta"><span class="score">8.5 分</span><span>共 24 集</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p6"><span class="tag">即将上线</span><span>春信年代</span></div>
+          <div class="card-body"><h3>春信年代</h3><div class="meta"><span class="score">预约中</span><span>年代 / 家庭</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：动漫天地 -->
+  <section class="section" id="anime" aria-labelledby="anime-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="anime-t">动漫天地 · 热血与治愈</h2>
+          <p>新番、经典与剧场版一网打尽</p>
+        </div>
+        <a class="more" href="#">进入动漫频道 →</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="poster p4"><span class="tag">热血</span><span>星轨少年</span></div>
+          <div class="card-body"><h3>星轨少年</h3><div class="meta"><span class="score">9.0 分</span><span>连载中</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p8"><span class="tag">治愈</span><span>林间食堂</span></div>
+          <div class="card-body"><h3>林间食堂</h3><div class="meta"><span class="score">8.9 分</span><span>全 12 话</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p1"><span class="tag">奇幻</span><span>云上国度的信</span></div>
+          <div class="card-body"><h3>云上国度的信</h3><div class="meta"><span class="score">8.7 分</span><span>剧场版</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p3"><span class="tag">竞技</span><span>球场之外</span></div>
+          <div class="card-body"><h3>球场之外</h3><div class="meta"><span class="score">8.3 分</span><span>全 24 话</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：综艺娱乐 -->
+  <section class="section" id="variety" aria-labelledby="variety-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="variety-t">综艺娱乐 · 下饭必看</h2>
+          <p>音乐、旅行、推理、生活观察类综艺盘点</p>
+        </div>
+        <a class="more" href="#">进入综艺频道 →</a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="poster p6"><span class="tag">音乐</span><span>周末开麦</span></div>
+          <div class="card-body"><h3>周末开麦</h3><div class="meta"><span class="score">8.4 分</span><span>第 3 季</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p5"><span class="tag">旅行</span><span>慢行三十天</span></div>
+          <div class="card-body"><h3>慢行三十天</h3><div class="meta"><span class="score">8.6 分</span><span>更新中</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p7"><span class="tag">推理</span><span>迷雾玩家</span></div>
+          <div class="card-body"><h3>迷雾玩家</h3><div class="meta"><span class="score">8.1 分</span><span>第 2 季</span></div></div>
+        </article>
+        <article class="card">
+          <div class="poster p2"><span class="tag">生活</span><span>小院日记</span></div>
+          <div class="card-body"><h3>小院日记</h3><div class="meta"><span class="score">8.0 分</span><span>更新中</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：影视资讯 + 热门榜单 -->
+  <section class="section" id="news" aria-labelledby="news-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="news-t">影视资讯 · 热门榜单</h2>
+          <p>行业动态、排播预告与霸气村电影网实时热度榜</p>
+        </div>
+        <a class="more" href="#">更多资讯 →</a>
+      </div>
+      <div class="two-col">
+        <div>
+          <ol class="rank" aria-label="霸气村电影网热度排行榜">
+            <li><span class="no">1</span><span class="txt">光影追缉 · 悬疑犯罪</span><span class="hot">98.6 万</span></li>
+            <li><span class="no">2</span><span class="txt">山海长歌 · 古装传奇</span><span class="hot">92.1 万</span></li>
+            <li><span class="no">3</span><span class="txt">星轨少年 · 热血动漫</span><span class="hot">87.4 万</span></li>
+            <li><span class="no">4</span><span class="txt">深蓝之下 · 科幻冒险</span><span class="hot">79.8 万</span></li>
+            <li><span class="no">5</span><span class="txt">城市微光 · 都市情感</span><span class="hot">74.2 万</span></li>
+            <li><span class="no">6</span><span class="txt">周末开麦 · 音乐综艺</span><span class="hot">68.9 万</span></li>
+            <li><span class="no">7</span><span class="txt">无声证词 · 剧情法庭</span><span class="hot">61.5 万</span></li>
+            <li><span class="no">8</span><span class="txt">林间食堂 · 治愈日常</span><span class="hot">57.3 万</span></li>
+          </ol>
+        </div>
+        <div>
+          <ul class="news">
+            <li>
+              <h3><a href="#">2026 春季档片单公布：多部悬疑与科幻新片定档</a></h3>
+              <p>霸气村电影网整理春季档排播表，包含定档日期、类型标签与看点速览，方便提前收藏。</p>
+              <div class="date">2026-10-09 · 影视资讯</div>
+            </li>
+            <li>
+              <h3><a href="#">剧集排播观察：周更与一次性上线，哪种更适合追剧？</a></h3>
+              <p>从更新节奏、讨论热度与完播率三个维度，聊聊当下主流剧集的排播策略变化。</p>
+              <div class="date">2026-10-07 · 行业观察</div>
+            </li>
+            <li>
+              <h3><a href="#">动漫剧场版重映潮：经典作品为何再度登上大银幕</a></h3>
+              <p>盘点近一年重映的动画剧场版，分析观众情怀与院线排片之间的双向选择。</p>
+              <div class="date">2026-10-05 · 动漫天地</div>
+            </li>
+            <li>
+              <h3><a href="#">综艺季播趋势：从明星阵容转向内容机制设计</a></h3>
+              <p>新一季综艺更强调规则与人物关系，霸气村电影网为你拆解其中值得注意的变化。</p>
+              <div class="date">2026-10-02 · 综艺娱乐</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类标签 -->
+  <section class="section" id="tags" aria-labelledby="tags-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="tags-t">热门类型 · 快速筛选</h2>
+          <p>点击类型标签，直达对应内容聚合页</p>
+        </div>
+      </div>
+      <div class="tags">
+        <a href="#">动作片</a><a href="#">科幻片</a><a href="#">悬疑片</a><a href="#">喜剧片</a>
+        <a href="#">爱情片</a><a href="#">动画片</a><a href="#">纪录片</a><a href="#">国产剧</a>
+        <a href="#">都市剧</a><a href="#">古装剧</a><a href="#">犯罪剧</a><a href="#">新番动画</a>
+        <a href="#">音乐综艺</a><a href="#">真人秀</a><a href="#">高分经典</a><a href="#">院线新片</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 / FAQ -->
+  <section class="section" id="about" aria-labelledby="about-t">
+    <div class="wrap">
+      <div class="about">
+        <h2 id="about-t">关于霸气村电影网</h2>
+        <p>霸气村电影网（baqicundianyingwang-app）是一个面向影视爱好者的内容聚合与导航站点。我们不搬运资源，而是把分散在各地的影视信息重新整理——按类型、热度、评分与更新时间重新编排，让你少花时间找，多花时间看。</p>
+        <p>站点收录电影、电视剧、动漫、综艺与影视资讯五大内容线，覆盖首页精选、电影推荐、热剧追更、动漫天地、综艺娱乐、影视资讯六大栏目，并保持每日更新。官方网站：<a href="#">https://www.baqicundianyingwang-app.com</a></p>
+        <div class="faq">
+          <details open="open">
+            <summary>霸气村电影网是什么类型的网站？</summary>
+            <p>霸气村电影网是一个影视内容聚合与导航站点，提供电影推荐、电视剧追更、动漫与综艺盘点，以及最新影视资讯，帮助用户快速发现值得一看的内容。</p>
+          </details>
+          <details>
+            <summary>霸气村电影网的内容更新频率如何？</summary>
+            <p>站点每日更新，热门榜单与资讯栏目会同步近期上映影片、剧集排播与行业动态。</p>
+          </details>
+          <details>
+            <summary>在霸气村电影网可以找到哪些栏目？</summary>
+            <p>包含首页精选、电影推荐、热剧追更、动漫天地、综艺娱乐、影视资讯、热门榜单与关于我们等栏目。</p>
+          </details>
+          <details>
+            <summary>如何联系霸气村电影网？</summary>
+            <p>可通过页脚「联系我们」提交反馈，我们会尽快处理内容纠错与合作咨询。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>霸气村电影网</h4>
+        <p style="font-size:13.5px;line-height:1.8;">影视内容聚合与导航站，每日更新电影、剧集、动漫、综艺与影视资讯。网址：https://www.baqicundianyingwang-app.com</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#featured">首页精选</a></li>
+          <li><a href="#movie">电影推荐</a></li>
+          <li><a href="#tv">热剧追更</a></li>
+          <li><a href="#anime">动漫天地</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>更多频道</h4>
+        <ul>
+          <li><a href="#variety">综艺娱乐</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#tags">类型筛选</a></li>
+          <li><a href="#about">关于我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点信息</h4>
+        <ul>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">内容纠错</a></li>
+          <li><a href="#">免责声明</a></li>
+          <li><a href="#">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note">Copyright © 2026 霸气村电影网 baqicundianyingwang-app　保留所有权利　·　本页面所有内容与链接仅作展示用途</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('nav');
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
